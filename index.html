@@ -79,15 +79,34 @@
 					</section>
 				</section>
 					
-
-				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+					<h2>Un design aérodynamique</h2>
+					<p>Le modèle a été réalisé avec le logiciel Solidworks</p>
+					<p>Nous l'avons ensuite imprimé à l'aide d'une imprimante 3D</p>
+					</section>
+					<section>
+					<h2>Choix du design</h2>
+					<p>Le profilage des capteurs</p>
+					<img src="profilage.png">
+					</section>
+					<section>
+					<h2>Design de l'assemblage</h2>
+					<img src="assemblage.png">
+					</section>
+					<section>
+					<h2>Design de l'assemblage</h2>
+					<img src="assemblage_detache.png" WIDTH=750 HEIGHT=500>
+					</section>
+				</section>
+				
 				<section>
 					<section>
 						<h2>Les ultrasons</h2>
 						<p>Des sons plus aigus que l'audible</p>
 						<p><small>De 20kHz à plusieurs centaines de MHz</small><p>
 					</section>
-					<section data-background="https://siolis.github.io/onde_air.gif">
+					<section data-background="onde_air.gif">
 					</section>
 					<section>
 						<h3>Nous avons choisis dans notre projet des transducteurs de 40kHz</h3>
@@ -103,51 +122,7 @@
 					<section>
 					<p>Par exemple avec la courbe jaune : </p>
 					<p>f(t)=50.10^(-3) . sin⁡(2π×40.10^3×t)</p>
-					<img src="https://siolis.github.io/scope_19.png">
-					</section>
-				</section>
-				
-				<section>
-					<section>
-						<h2>Le principe de fonctionnement</h2>
-					</section>
-					<section>
-						<h3>La vistesse du vent va <b>s'additionner</b> à celle des ultrasons</h3>
-						<p><small>(qui est de 331.5+0,607T m/s avec T la température en °C)</small></p>
-					</section>
-					<section data-background="https://media.giphy.com/media/14mgxYFJHXGmoo/giphy.gif">
-						<h2><font color ="white">Mais comment obtenir la vitesse si le vent vient du côté ?</font></h2>
-					</section>
-					<section>
-					<h2>La réponse</h2>
-					<p>Mettre des transducteurs aux quatres points cardinaux en imaginant un repère où le vent sera un vecteur projeté sur les axes</p>
-					<p><b>Et faire un peu de trigo!</b></p>
-					</section>
-					<section>
-					<h2>Mais du coup ...</h2>
-					<p>On peut calculer la direction du vent</p>
-					<h3 class="fragment">Eh bien oui, on peut !</h3>
-					</section>
-				</section>
-				
-				<section>
-					<section>
-					<h2>Un design aérodynamique</h2>
-					<p>Le modèle a été réalisé avec le logiciel Solidworks</p>
-					<p>Nous l'avons ensuite imprimé à l'aide d'une imprimante 3D</p>
-					</section>
-					<section>
-					<h2>Choix du design</h2>
-					<p>Le profilage des capteurs</p>
-					<img src="https://siolis.github.io/profilage.png">
-					</section>
-					<section>
-					<h2>Design de l'assemblage</h2>
-					<img src="https://siolis.github.io/assemblage.png">
-					</section>
-					<section>
-					<h2>Design de l'assemblage</h2>
-					<img src="https://siolis.github.io/assemblage_detache.png" WIDTH=750 HEIGHT=500>
+					<img src="scope_19.png">
 					</section>
 				</section>
 				
@@ -160,7 +135,7 @@
 					</section>
 					<section>
 					<h3>Principe de fonctionnement</h3>
-					<img src="https://siolis.github.io/HC-SR04-Ultrasonic-Sensor-Working-Echo-when-no-Obstacle.gif">
+					<img src="HC-SR04-Ultrasonic-Sensor-Working-Echo-when-no-Obstacle.gif">
 					</section>
 					<section>
 					<h2>La transmission à l'arduino</h2>
@@ -175,9 +150,36 @@ duree_ns = pulseIn(nsechoPin, HIGH); //Mesure du temps à l'état haut
 					</section>
 					<section>
 					<h2>L'électronique</h2>
-					<img src="https://siolis.github.io/fritzing.png">
+					<img src="fritzing.png">
 					</section>
+				</section>                
+                
+				<section>
+					<section>
+						<h2>Le principe de fonctionnement</h2>
+					</section>
+					<section>
+						<h3>La vistesse du vent va <b>s'additionner</b> à celle des ultrasons</h3>
+						<p><small>(qui est de 331.5+0,607T m/s avec T la température en °C)</small></p>
+					</section>
+					<section data-background="giphy.gif">
+						<h2><font color ="white">Mais comment obtenir la vitesse si le vent vient du côté ?</font></h2>
+					</section>
+					<section>
+					<h2>La réponse</h2>
+					<p>Mettre des transducteurs aux quatres points cardinaux en imaginant un repère où le vent sera un vecteur projeté sur les axes</p>
+					<p><b>Et faire un peu de trigo!</b></p>
+					</section>
+					<section>
+					<h2>Mais du coup ...</h2>
+					<p>On peut calculer la direction du vent</p>
+					<h3 class="fragment">Eh bien oui, on peut !</h3>
+					</section>
+                    <section data-background-iframe="animation.html" data-background-interactive>
+                    </section>
 				</section>
+				
+				
 				
 				<section>
 				<section>
@@ -207,17 +209,21 @@ Serial.println(String(j)+';'+String(duree_ns)+';'+String(duree_eo));
 				<section>
 				<h2>Pour rendre le projet autonome</h2>
 				<p>Nous avons inséré un Raspberry pi ainsi qu'une batterie</p>
-				<img src="https://siolis.github.io/exterieur5.jpg" WIDTH=500 HEIGHT=300> 				
+				<img src="exterieur5.jpg" WIDTH=500 HEIGHT=300> 				
+				</section>
+				<section>
+				<h2>Pour rendre le projet autonome</h2>
+				<p>De plus les données vont être envoyées vers un serveur domotique</p>
 				</section>
 				<section>
 				<h3>Les tests en conditions réelles</h3>
-				<h5>Avec des résultats au <b>cm/s</b> près</h5>
+				<h5>Avec des résultats au <b>km/h</b> près</h5>
 				<p>Par rapport aux mesures de Météo France</p>
-				<img src="https://siolis.github.io/meteofrance.png" WIDTH=500 HEIGHT=300>
+				<img src="meteo-france.jpg" WIDTH=500 HEIGHT=300>
 				</section>
 				<section>
 				<h3>Mais aussi en soufflerie</h3>
-				<img src="https://siolis.github.io/soufflerie2.jpg" WIDTH=500 HEIGHT=300>
+				<img src="soufflerie2.jpg" WIDTH=500 HEIGHT=300>
 				</section>
 				</section>
 				
@@ -226,13 +232,15 @@ Serial.println(String(j)+';'+String(duree_ns)+';'+String(duree_eo));
 				<h4>Notre projet peut mesurer l'écoulement de l'air</h4>
 				<h3 class="fragment">Mais pas que</h3>
 				</section>
-				<section data-background="https://siolis.github.io/mer.gif">
+				<section data-background="mer.gif">
 				<p><font color ="white">En modifiant les transducteurs et en le rendant étanche</p>
 				<h3>Nous pouvons mesurer les courants marins et en faire un courantomètre</font></h3>
 				</section>
 				</section>
+            
 			    <section data-background-video="SIOLIS.mov">
 				</section>
+            
 
 
 			</div>
